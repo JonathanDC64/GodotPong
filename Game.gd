@@ -42,6 +42,7 @@ func spawn_ball():
 	ball.set_velocity(velocity)
 	
 	current_ball = ball
+	$AI_Paddle.set_ball(current_ball)
 	
 
 func _process(delta):

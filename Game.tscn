@@ -1,18 +1,19 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Bar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Splitter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Paddle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/8-BIT WONDER.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://scenes/AI_Paddle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/8-BIT WONDER.TTF" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 60
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="Game" type="Node2D" index="0"]
@@ -29,20 +30,18 @@ position = Vector2( 512, 8 )
 position = Vector2( 512, 592 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Bar3" parent="." index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 1014.77, 356.972 )
-rotation = 1.5708
-_sections_unfolded = [ "Transform" ]
-
-[node name="Splitter" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Splitter" parent="." index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 512, 307 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Paddle" parent="." index="4" instance=ExtResource( 5 )]
+[node name="Paddle" parent="." index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 40, 280 )
+
+[node name="AI_Paddle" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 980, 280 )
 
 [node name="Score1" type="Label" parent="." index="5"]
 
